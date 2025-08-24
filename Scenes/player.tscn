@@ -11,12 +11,20 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_vgqql")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgqql")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_fkybt")
 }],
 "loop": true,
-"name": &"Default",
+"name": &"Move",
 "speed": 3.0
 }]
 
@@ -28,4 +36,4 @@ shape = SubResource("RectangleShape2D_f60y1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_x3wgy")
-animation = &"Default"
+animation = &"Move"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ly1djvcxdneg"
-path="res://.godot/imported/morganSleep.png-55251e1cdb9ea38e6b1ea79fe4ffa300.ctex"
+uid="uid://xdwls1rtycme"
+path="res://.godot/imported/muncher2.png-4b15fe7d064e6a95aaa3ca6fd2411a8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/morganSleep.png"
-dest_files=["res://.godot/imported/morganSleep.png-55251e1cdb9ea38e6b1ea79fe4ffa300.ctex"]
+source_file="res://Assets/Images/muncher2.png"
+dest_files=["res://.godot/imported/muncher2.png-4b15fe7d064e6a95aaa3ca6fd2411a8d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ly1djvcxdneg"
-path="res://.godot/imported/morganSleep.png-55251e1cdb9ea38e6b1ea79fe4ffa300.ctex"
+uid="uid://dwnbyl8wor7f1"
+path="res://.godot/imported/BulletBill.png-668f96d7381b7508457e4b53b31d1a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/morganSleep.png"
-dest_files=["res://.godot/imported/morganSleep.png-55251e1cdb9ea38e6b1ea79fe4ffa300.ctex"]
+source_file="res://Assets/Images/BulletBill.png"
+dest_files=["res://.godot/imported/BulletBill.png-668f96d7381b7508457e4b53b31d1a1e.ctex"]
 
 [params]
 

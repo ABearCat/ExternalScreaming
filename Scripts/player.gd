@@ -5,8 +5,8 @@ extends CharacterBody2D
 @export var jump_height = -500
 var gravity_toggle = true
 var is_climbing = true
-var attack_cooldown = 5
-var current_cooldown = 0
+var can_attack = true
+var wait_time = 0.1
 
 func _physics_process(delta: float):
 	velocity.y += gravity * delta
@@ -18,7 +18,12 @@ func _physics_process(delta: float):
 func _input(event: InputEvent):
 	#BLAST EM
 	if event.is_action_pressed("shoot"):
-		current_cooldown
+		#use a timer for attack cooldown
+		if can_attack == true:
+			can_attack = false
+			#I think this is a 0.1 second CD on attacking?
+			get_tree().create_timer(wait_time).timeout.connect(func(): can_attack = true)
+			#Fire Bullet, Gonna worry about this later after I actually get enemies and whatnot working
 	
 	#GO UP
 	if event.is_action("jump") and is_on_floor():

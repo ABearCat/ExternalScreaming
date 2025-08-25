@@ -7,5 +7,5 @@
 [node name="Player" parent="." instance=ExtResource("1_2llne")]
 position = Vector2(166, 213)
 scale = Vector2(0.2, 0.2)
-speed = 500
-gravity = 1000
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]

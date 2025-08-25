@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://6r8av3pa0ovx"]
 
 [ext_resource type="Script" uid="uid://ii8ahae3wlt3" path="res://Scripts/player.gd" id="1_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://bskvqfw7odidf" path="res://Assets/Images/morganWalk1.png" id="2_vgqql"]
-[ext_resource type="Texture2D" uid="uid://21psrnlam460" path="res://Assets/Images/morganWalk2.png" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bskvqfw7odidf" path="res://Assets/Sprites/morganWalk1.png" id="2_vgqql"]
+[ext_resource type="Texture2D" uid="uid://21psrnlam460" path="res://Assets/Sprites/morganWalk2.png" id="3_fkybt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 

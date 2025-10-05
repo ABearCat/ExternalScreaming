@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed = 500
+@export var speed = 250
 @export var gravity = 1000
-@export var jump_height = -500
+@export var jump_height = -400
 var gravity_toggle = true
 var is_climbing = true
 var can_attack = true

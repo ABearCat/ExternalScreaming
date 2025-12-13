@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var gravity = 1000
 @export var jump_height = -400
 var gravity_toggle = true
-var is_climbing = true
+var is_climbing = false
 var can_attack = true
 var wait_time = 0.1
 
@@ -36,9 +36,6 @@ func _input(event: InputEvent):
 		if Input.is_action_just_pressed("move_down"):
 			gravity = 0
 			velocity.y = 500
-			
-		
-			
 	else:
 		gravity = 1000
 		is_climbing = false

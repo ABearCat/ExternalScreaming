@@ -1,12 +1,12 @@
-[gd_scene load_steps=13 format=4 uid="uid://bs4k5uc8qeo4c"]
+[gd_scene load_steps=15 format=4 uid="uid://bs4k5uc8qeo4c"]
 
 [ext_resource type="PackedScene" uid="uid://6r8av3pa0ovx" path="res://Scenes/player.tscn" id="1_2llne"]
 [ext_resource type="Texture2D" uid="uid://dg4rx6fai6jr4" path="res://Assets/Tilesets/Green_Greens.png" id="2_q12u6"]
+[ext_resource type="PackedScene" uid="uid://damtheux0j2cm" path="res://Scripts/death.tscn" id="5_slnnj"]
 [ext_resource type="Texture2D" uid="uid://dqbyyyb55oo5t" path="res://Assets/Tilesets/Yoshi's_Island_Cave.png" id="12_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://dvfwegg3p4x83" path="res://Assets/Tilesets/Yoshi's_Island_Forest.png" id="13_03od6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jghel"]
-load_path = "res://.godot/imported/Yoshi's_Island_Sewer.png-3d4b6a30c61d55edc20aefc78bd3df75.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o0dvq"]
 texture = SubResource("CompressedTexture2D_jghel")
@@ -166,7 +166,6 @@ separation = Vector2i(1, 1)
 18:7/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_slnnj"]
-load_path = "res://.godot/imported/Yoshi's_Island_Water.png-e0e289430765b616174f5a4bc3de5a4a.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1nrjw"]
 texture = SubResource("CompressedTexture2D_slnnj")
@@ -6049,6 +6048,8 @@ sources/9 = SubResource("TileSetAtlasSource_nlo60")
 sources/10 = SubResource("TileSetAtlasSource_o0dvq")
 sources/11 = SubResource("TileSetAtlasSource_1nrjw")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t3or0"]
+
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_2llne")]
@@ -6057,6 +6058,8 @@ scale = Vector2(0.016, 0.016)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
+limit_left = -175
+limit_bottom = 335
 
 [node name="Level" type="TileMapLayer" parent="."]
 position = Vector2(411, 89)
@@ -6064,6 +6067,14 @@ tile_map_data = PackedByteArray("AADm/woABAABAAMAAADn/woABAABAAMAAADo/woABAABAAM
 tile_set = SubResource("TileSet_2llne")
 
 [node name="Level2" type="TileMapLayer" parent="."]
+visible = false
 position = Vector2(411, 89)
 tile_map_data = PackedByteArray("AADm/woABAABAAMAAADp/woABAABAAMAAADq/woABAABAAMAAADr/woABAABAAMAAADs/woABAABAAMAAADt/woABAABAAMAAADu/woABAABAAMAAADv/woABAABAAMAAADw/woABAABAAMAAADx/woABAABAAMAAADy/woABAABAAMAAADz/woABAABAAMAAAD0/woABAABAAMAAAD1/woABAABAAMAAAD2/woABAABAAMAAAD3/woABAABAAMAAAD4/woABAABAAMAAAD5/woABAABAAMAAAD6/woABAABAAMAAAD7/woABAABAAMAAAD8/woABAABAAMAAAD9/woABAABAAMAAAD+/woABAABAAMAAAD//woABAABAAMAAAAAAAoABAABAAMAAAABAAoABAABAAMAAAACAAoABAABAAMAAAADAAoABAACAAMAAAD8/wkABAAGAAMAAAD8/wgABAAGAAIAAAD//wkABAAKAAMAAAD//wgABAAKAAIAAAD//wcABAAKAAEAAAD//wYABAAKAAAAAAAAAAYABAALAAAAAAABAAYABAAMAAAAAAACAAYABAANAAAAAAACAAcABAANAAEAAAACAAgABAANAAIAAAACAAkABAANAAMAAAAAAAcABAAMAAEAAAABAAcABAAMAAEAAAABAAgABAAMAAEAAAABAAkABAAMAAEAAAAAAAkABAAMAAEAAAAAAAgABAAMAAEAAAD5/wkABAALAAEAAADo/wkABAALAAEAAADr/wkABAAEAAMAAADs/wkABAAFAAMAAADs/wgABAAFAAIAAADr/wgABAAFAAIAAADs/wcABAAEAAIAAADl/woABAABAAMAAADk/woABAABAAMAAADj/woABAABAAMAAADi/woABAABAAMAAADh/woABAABAAMAAADg/woABAABAAMAAADf/woABAAAAAMAAADp/wgACAAnAAIAAADq/wgACAAoAAIAAADo/wgACAAmAAIAAADh/wgACAATAAEAAADi/wgACAATAAEAAADj/wgACAATAAEAAADh/wcACAATAAAAAADi/wcACAAUAAAAAADj/wcACAATAAAAAADx/wUACAAiAAAAAADy/wUACAAjAAAAAADz/wUACAAkAAAAAADx/wYACAAiAAEAAADw/wYACAAhAAEAAADw/wcACAAhAAIAAADw/wgACAAhAAMAAADx/wkACAAiAAQAAADx/wgACAAiAAMAAADy/wkACAAjAAQAAADz/wkACAAkAAQAAADz/wgACAAkAAMAAAD0/wgACAAlAAMAAADx/wcACAAiAAIAAADy/wYACAAjAAEAAADy/wcACAAjAAIAAADy/wgACAAjAAMAAADz/wYACAAkAAEAAADz/wcACAAkAAIAAAD0/wYACAAlAAEAAAD0/wcACAAlAAIAAADm/wQACAAVAAUAAADm/wUACAAVAAYAAADm/wYACAAVAAcAAADn/wQACAAWAAUAAADn/wUACAAWAAYAAADn/wYACAAWAAcAAADo/wQACAAXAAUAAADo/wUACAAXAAYAAADo/wYACAAXAAcAAAD2/wUACAAAAAAAAAD2/wYACAAAAAEAAAD3/wUACAABAAAAAAD3/wYACAABAAEAAAD4/wUACAACAAAAAAD4/wYACAACAAEAAAD5/wUACAADAAAAAAD5/wYACAADAAEAAAD6/wUACAAEAAAAAAD6/wYACAAEAAEAAAD7/wUACAAFAAAAAAD7/wYACAAFAAEAAADa/wgACAAbAAAAAADa/wkACAAbAAEAAADa/woACAAbAAIAAADb/wgACAAcAAAAAADb/wkACAAcAAEAAADb/woACAAcAAIAAADc/wgACAAdAAAAAADc/wkACAAdAAEAAADc/woACAAdAAIAAADd/wIACAAWAAUAAADe/wIACAAWAAUAAADf/wIACAAWAAUAAADg/wIACAAWAAUAAADh/wIACAAWAAUAAADi/wIACAAWAAUAAADj/wIACAAWAAUAAADk/wIACAAWAAUAAADl/wIACAAWAAUAAADm/wIACAAWAAUAAADn/wIACAAWAAUAAAA=")
 tile_set = SubResource("TileSet_2llne")
+
+[node name="Death" parent="." instance=ExtResource("5_slnnj")]
+position = Vector2(411, 89)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death"]
+position = Vector2(-348, 249)
+shape = SubResource("WorldBoundaryShape2D_t3or0")

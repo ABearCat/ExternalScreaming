@@ -1,14 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://boye8brc6ough"]
+[gd_scene load_steps=13 format=4 uid="uid://bab0kygm4xdmo"]
 
-[ext_resource type="PackedScene" uid="uid://6r8av3pa0ovx" path="res://Scenes/player.tscn" id="1_2llne"]
-[ext_resource type="Texture2D" uid="uid://dg4rx6fai6jr4" path="res://Assets/Tilesets/Green_Greens.png" id="2_q12u6"]
-[ext_resource type="Texture2D" uid="uid://cixf1f80wvym0" path="res://Assets/Tilesets/testTiles.png" id="2_t3or0"]
-[ext_resource type="PackedScene" uid="uid://damtheux0j2cm" path="res://Scripts/death.tscn" id="5_slnnj"]
-[ext_resource type="Texture2D" uid="uid://dqbyyyb55oo5t" path="res://Assets/Tilesets/Yoshi's_Island_Cave.png" id="12_fh0sh"]
-[ext_resource type="Texture2D" uid="uid://dvfwegg3p4x83" path="res://Assets/Tilesets/Yoshi's_Island_Forest.png" id="13_03od6"]
+[ext_resource type="PackedScene" uid="uid://6r8av3pa0ovx" path="res://Scenes/player.tscn" id="1_1hb7a"]
+[ext_resource type="Texture2D" uid="uid://cixf1f80wvym0" path="res://Assets/Tilesets/testTiles.png" id="2_yqp1w"]
+[ext_resource type="Texture2D" uid="uid://dg4rx6fai6jr4" path="res://Assets/Tilesets/Green_Greens.png" id="3_0ohif"]
+[ext_resource type="Texture2D" uid="uid://dqbyyyb55oo5t" path="res://Assets/Tilesets/Yoshi's_Island_Cave.png" id="4_08eeq"]
+[ext_resource type="Texture2D" uid="uid://dvfwegg3p4x83" path="res://Assets/Tilesets/Yoshi's_Island_Forest.png" id="5_o8m62"]
+[ext_resource type="PackedScene" uid="uid://damtheux0j2cm" path="res://Scripts/death.tscn" id="6_g8yfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysn8j"]
-texture = ExtResource("2_t3or0")
+texture = ExtResource("2_yqp1w")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -29,7 +29,7 @@ texture = ExtResource("2_t3or0")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(3, -8, -8, -8, -8, 8, 8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_joc8x"]
-texture = ExtResource("2_q12u6")
+texture = ExtResource("3_0ohif")
 margins = Vector2i(1, 11)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -140,7 +140,7 @@ separation = Vector2i(1, 1)
 8:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iu5qg"]
-texture = ExtResource("12_fh0sh")
+texture = ExtResource("4_08eeq")
 margins = Vector2i(1, 1)
 separation = Vector2i(1, 1)
 0:0/0 = 0
@@ -2764,7 +2764,7 @@ separation = Vector2i(1, 1)
 139:27/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlo60"]
-texture = ExtResource("13_03od6")
+texture = ExtResource("5_o8m62")
 separation = Vector2i(1, 1)
 0:0/0 = 0
 1:0/0 = 0
@@ -5643,7 +5643,7 @@ sources/0 = SubResource("TileSetAtlasSource_ysn8j")
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_2llne")]
+[node name="Player" parent="." instance=ExtResource("1_1hb7a")]
 position = Vector2(12, 241)
 scale = Vector2(0.016, 0.016)
 floor_snap_length = 5.0
@@ -5658,10 +5658,10 @@ limit_bottom = 323
 
 [node name="Level1" type="TileMapLayer" parent="."]
 position = Vector2(411, 89)
-tile_map_data = PackedByteArray("AADm/woABAABAAMAAADn/woABAABAAMAAADo/woABAABAAMAAADp/woABAABAAMAAADq/woABAABAAMAAADr/woABAABAAMAAADs/woABAABAAMAAADt/woABAABAAMAAADu/woABAABAAMAAADv/woABAABAAMAAADw/woABAABAAMAAADx/woABAABAAMAAADy/woABAABAAMAAADz/woABAABAAMAAAD0/woABAABAAMAAAD1/woABAABAAMAAAD2/woABAABAAMAAAD3/woABAABAAMAAAD4/woABAABAAMAAAD5/woABAABAAMAAAD6/woABAABAAMAAAD7/woABAABAAMAAAD8/woABAABAAMAAAD9/woABAABAAMAAAD+/woABAABAAMAAAD//woABAABAAMAAAAAAAoABAABAAMAAAABAAoABAABAAMAAAACAAoABAABAAMAAAADAAoABAACAAMAAAD8/wkABAAGAAMAAAD8/wgABAAGAAIAAAD//wkABAAKAAMAAAD//wgABAAKAAIAAAD//wcABAAKAAEAAAD//wYABAAKAAAAAAAAAAYABAALAAAAAAABAAYABAAMAAAAAAACAAYABAANAAAAAAACAAcABAANAAEAAAACAAgABAANAAIAAAACAAkABAANAAMAAAAAAAcABAAMAAEAAAABAAcABAAMAAEAAAABAAgABAAMAAEAAAABAAkABAAMAAEAAAAAAAkABAAMAAEAAAAAAAgABAAMAAEAAAD5/wkABAALAAEAAADo/wkABAALAAEAAADr/wkABAAEAAMAAADs/wkABAAFAAMAAADs/wgABAAFAAIAAADr/wgABAAFAAIAAADs/wcABAAEAAIAAADl/woABAABAAMAAADk/woABAABAAMAAADj/woABAABAAMAAADi/woABAABAAMAAADh/woABAABAAMAAADg/woABAABAAMAAADf/woABAAAAAMAAADp/wgACAAnAAIAAADq/wgACAAoAAIAAADo/wgACAAmAAIAAADx/wUACAAiAAAAAADy/wUACAAjAAAAAADz/wUACAAkAAAAAADx/wYACAAiAAEAAADw/wYACAAhAAEAAADw/wcACAAhAAIAAADw/wgACAAhAAMAAADx/wkACAAiAAQAAADx/wgACAAiAAMAAADy/wkACAAjAAQAAADz/wkACAAkAAQAAADz/wgACAAkAAMAAAD0/wgACAAlAAMAAADx/wcACAAiAAIAAADy/wYACAAjAAEAAADy/wcACAAjAAIAAADy/wgACAAjAAMAAADz/wYACAAkAAEAAADz/wcACAAkAAIAAAD0/wYACAAlAAEAAAD0/wcACAAlAAIAAADm/wQACAAVAAUAAADm/wUACAAVAAYAAADm/wYACAAVAAcAAADn/wQACAAWAAUAAADn/wUACAAWAAYAAADn/wYACAAWAAcAAADo/wQACAAXAAUAAADo/wUACAAXAAYAAADo/wYACAAXAAcAAAD2/wUACAAAAAAAAAD2/wYACAAAAAEAAAD3/wUACAABAAAAAAD3/wYACAABAAEAAAD4/wUACAACAAAAAAD4/wYACAACAAEAAAD5/wUACAADAAAAAAD5/wYACAADAAEAAAD6/wUACAAEAAAAAAD6/wYACAAEAAEAAAD7/wUACAAFAAAAAAD7/wYACAAFAAEAAADd/wIACAAWAAUAAADe/wIACAAWAAUAAADf/wIACAAWAAUAAADg/wIACAAWAAUAAADh/wIACAAWAAUAAADi/wIACAAWAAUAAADj/wIACAAWAAUAAADk/wIACAAWAAUAAADl/wIACAAWAAUAAADm/wIACAAWAAUAAADn/wIACAAWAAUAAADi/wgACAATAAEAAADh/wgACAATAAEAAADj/wgACAATAAEAAADh/wcACAATAAAAAADi/wcACAAUAAAAAADj/wcACAATAAAAAADb/wkACAAcAAEAAADb/woACAAcAAIAAADa/woACAAbAAIAAADc/woACAAdAAIAAADc/wkACAAdAAEAAADa/wkACAAbAAEAAADb/wgACAAcAAAAAADc/wgACAAdAAAAAADa/wgACAAbAAAAAADt/wYAAAACAAAAAADu/wUAAAACAAAAAADv/wQAAAACAAAAAADw/wMAAAACAAAAAADu/wYAAAAAAAAAAADv/wUAAAAAAAAAAADw/wQAAAAAAAAAAADx/wMAAAAAAAAAAADx/wIAAAACAAAAAADy/wEAAAACAAAAAADz/wAAAAACAAAAAAD0////AAACAAAAAAD1//7/AAACAAAAAAD2//3/AAACAAAAAAD3//z/AAACAAAAAAD4//v/AAACAAAAAADy/wIAAAAAAAAAAADz/wEAAAAAAAAAAAD0/wAAAAAAAAAAAAD1////AAAAAAAAAAD2//7/AAAAAAAAAAD3//3/AAAAAAAAAAD4//z/AAAAAAAAAADu/wAAAAAGAAIAAADu////AAAGAAEAAADu//7/AAAGAAAAAADt//3/AAAGAAIAAADt//z/AAAGAAEAAADt//v/AAAGAAAAAADv/wEAAAAAAAAAAADn/wEAAAACAAAAAADo/wIAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AADm/woABAABAAMAAADn/woABAABAAMAAADo/woABAABAAMAAADp/woABAABAAMAAADq/woABAABAAMAAADr/woABAABAAMAAADs/woABAABAAMAAADt/woABAABAAMAAADu/woABAABAAMAAADv/woABAABAAMAAADw/woABAABAAMAAADx/woABAABAAMAAADy/woABAABAAMAAADz/woABAABAAMAAAD0/woABAABAAMAAAD1/woABAABAAMAAAD2/woABAABAAMAAAD3/woABAABAAMAAAD4/woABAABAAMAAAD5/woABAABAAMAAAD6/woABAABAAMAAAD7/woABAABAAMAAAD8/woABAABAAMAAAD9/woABAABAAMAAAD+/woABAABAAMAAAD//woABAABAAMAAAAAAAoABAABAAMAAAABAAoABAABAAMAAAACAAoABAABAAMAAAADAAoABAACAAMAAADl/woABAABAAMAAADk/woABAABAAMAAADj/woABAABAAMAAADi/woABAABAAMAAADh/woABAABAAMAAADg/woABAABAAMAAADf/woABAAAAAMAAAA=")
 tile_set = SubResource("TileSet_2llne")
 
-[node name="Death" parent="." instance=ExtResource("5_slnnj")]
+[node name="Death" parent="." instance=ExtResource("6_g8yfn")]
 position = Vector2(411, 89)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death"]

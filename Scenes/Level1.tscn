@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bs4k5uc8qeo4c"]
+[gd_scene load_steps=11 format=4 uid="uid://boye8brc6ough"]
 
 [ext_resource type="PackedScene" uid="uid://6r8av3pa0ovx" path="res://Scenes/player.tscn" id="1_2llne"]
 [ext_resource type="Texture2D" uid="uid://dg4rx6fai6jr4" path="res://Assets/Tilesets/Green_Greens.png" id="2_q12u6"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="External Screaming"
-run/main_scene="uid://bs4k5uc8qeo4c"
+run/main_scene="uid://boye8brc6ough"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [display]

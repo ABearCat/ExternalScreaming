@@ -6066,7 +6066,6 @@ physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_joc8x")
 sources/8 = SubResource("TileSetAtlasSource_iu5qg")
 sources/9 = SubResource("TileSetAtlasSource_nlo60")
-sources/10 = SubResource("TileSetAtlasSource_o0dvq")
 sources/11 = SubResource("TileSetAtlasSource_1nrjw")
 sources/1 = SubResource("TileSetAtlasSource_slnnj")
 
@@ -6081,8 +6080,9 @@ floor_snap_length = 5.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
-limit_left = -175
-limit_bottom = 335
+limit_left = -208
+limit_top = -9999777
+limit_bottom = 323
 
 [node name="Level1" type="TileMapLayer" parent="."]
 position = Vector2(411, 89)

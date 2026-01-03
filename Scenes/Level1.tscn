@@ -6045,8 +6045,8 @@ physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_joc8x")
 sources/8 = SubResource("TileSetAtlasSource_iu5qg")
 sources/9 = SubResource("TileSetAtlasSource_nlo60")
-sources/10 = SubResource("TileSetAtlasSource_o0dvq")
 sources/11 = SubResource("TileSetAtlasSource_1nrjw")
+sources/10 = SubResource("TileSetAtlasSource_o0dvq")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t3or0"]
 
